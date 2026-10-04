@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Base Layer Styling */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #070a12;
+  color: #f1f5f9;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom Smooth Scrollbar for Flipkart/Amazon Style Category Rows */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070a12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+
+/* Luxury E-Commerce Glassmorphism & Neon Glow Utilities */
+
+/* Subtle glow mesh matching the background of PrinceKart graphics */
+.bg-cyber-gradient {
+  background: radial-gradient(circle at 50% -20%, rgba(59, 130, 246, 0.15) 0%, rgba(99, 102, 241, 0.05) 50%, rgba(7, 10, 18, 0) 100%);
+}
+
+/* Modern Card Glow Overlays */
+.premium-blur-capsule {
+  position: relative;
+}
+
+.premium-blur-capsule::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(to bottom right, rgba(59, 130, 246, 0.2), rgba(99, 102, 241, 0.05));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Global Selection Tint Changes */
+::selection {
+  background-color: rgba(59, 130, 246, 0.25);
+  color: #60a5fa;
+}
